@@ -1,0 +1,95 @@
+/* === FAQ (acordeón elegante) === */
+.faq-lead{ color:#cbd5e1; margin:6px 0 12px; }
+.faq-note{ display:block; color:#9ca3af; margin-top:4px; }
+
+/* Grid responsive */
+.faq-grid{
+  display:grid; gap:14px 24px;
+  grid-template-columns: 1fr 1fr;
+  counter-reset: faq;
+}
+@media (max-width:900px){
+  .faq-grid{ grid-template-columns:1fr; }
+}
+
+/* Ítem FAQ */
+.faq{
+  position:relative;
+  padding:12px 12px 12px 56px;     /* espacio para número */
+  border-bottom:1px solid rgba(210,180,108,.14);
+  counter-increment: faq;
+}
+
+/* Número dorado 01–10 */
+.faq::before{
+  content: counter(faq, decimal-leading-zero);
+  position:absolute; left:0; top:10px;
+  display:grid; place-items:center;
+  width:36px; height:36px; border-radius:999px;
+  background:linear-gradient(135deg,var(--brand),var(--brand-2));
+  color:#0A1220; font-weight:800; font-size:.95rem;
+  box-shadow:0 0 0 4px rgba(184,138,45,.16), 0 10px 22px rgba(0,0,0,.35);
+}
+
+/* Summary (trigger) */
+.faq > summary{
+  list-style:none;
+  cursor:pointer;
+  font-weight:800; letter-spacing:.2px; line-height:1.35;
+  color:var(--text);
+  display:grid; grid-template-columns: 1fr auto; align-items:center; gap:8px;
+  outline:none;
+}
+.faq > summary::-webkit-details-marker{ display:none; }
+
+/* Chevron */
+.faq > summary::after{
+  content:"▾";
+  font-size:1rem; line-height:1;
+  color:#d9dbe3;
+  transform: rotate(0deg);
+  transition: transform .2s ease;
+}
+.faq[open] > summary::after{
+  transform: rotate(-180deg);
+}
+
+/* Cuerpo de respuesta */
+.answer{
+  padding-top:8px; color:#d9dbe3;
+}
+.answer p{ margin:0 0 10px; }
+.answer ul{ margin:0 0 8px 18px; }
+.answer li{ margin:2px 0; }
+
+/* CTA inferior */
+.faq-cta{
+  display:flex; 
+  gap:10px; 
+  flex-wrap:wrap; 
+  align-items:center;
+  margin-top:60px;
+}
+.faq-cta .sep{ color:#9ca3af; }
+
+/* Botones: reutiliza los globales si ya los tienes */
+.btn-primary, .btn-ghost{
+  display:inline-block; text-align:center;
+  padding:10px 16px; border-radius:12px; font-weight:800; letter-spacing:.2px;
+  transition:transform .2s ease, filter .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.btn-primary{
+  color:#0A1220; background:linear-gradient(135deg,var(--brand),var(--brand-2));
+  box-shadow:0 10px 24px rgba(0,0,0,.35);
+}
+.btn-primary:hover{ transform:translateY(-1px); filter:saturate(1.05); }
+
+.btn-ghost{
+  color:var(--brand-2); border:1px solid var(--brand); background:transparent;
+}
+.btn-ghost:hover{ background:rgba(184,138,45,.06); }
+
+/* Accesibilidad */
+.faq > summary:focus-visible{
+  outline:2px solid var(--ring); outline-offset:4px; border-radius:8px;
+}

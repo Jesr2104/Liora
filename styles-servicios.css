@@ -1,0 +1,186 @@
+/* --> Stylo sobre nosotros [Bloque 1]
+-------------------------------------------------------------------*/
+.services-lead{ 
+  color:#cbd5e1; 
+  margin:6px 0 18px; 
+}
+
+.services-lead .note{ 
+  color:#B9B2A3; 
+}
+
+.link-inline{ 
+  color:var(--brand-2); 
+  text-decoration:underline; 
+}
+
+/* Grid general de servicios */
+.services-grid{
+  display:grid; 
+  gap:28px 32px;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  counter-reset: svc; /* numeración automática 01–.. */
+}
+
+@media (max-width:1200px){
+  .services-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width:820px){
+  .services-grid{ grid-template-columns: 1fr; }
+}
+
+/* Tarjeta de servicio */
+.service{
+  --svc-indent: 44px;                /* sangría para alinear con badge */
+  position:relative;
+  display:flex; 
+  flex-direction:column;          /* empuja CTA al fondo */
+  padding:22px 18px 18px 18px;
+  border:1px solid var(--border);
+  border-radius:18px;
+  background:rgba(15,30,51,.45);
+  backdrop-filter:saturate(1.1) blur(4px);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  counter-increment: svc;
+}
+
+.service:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(0,0,0,.45);
+  border-color: rgba(210,180,108,.35);
+}
+
+/* Badge numerado (más pequeño) */
+.service::before{
+  content: counter(svc, decimal-leading-zero);
+  position:absolute; 
+  top:12px; 
+  left:12px;
+  display:grid; 
+  place-items:center;
+  width:28px; 
+  height:28px; 
+  border-radius:999px;   /* antes 36px */
+  background:linear-gradient(135deg,var(--brand),var(--brand-2));
+  color:#0A1220; 
+  font-weight:800; 
+  font-size:.8rem; /* antes .95rem */
+  box-shadow:0 0 0 3px rgba(184,138,45,.16), 0 8px 18px rgba(0,0,0,.35);
+}
+
+/* Encabezado y descripción (más ancho, texto justificado) */
+.service-head{ 
+  padding-left: 
+  var(--svc-indent); 
+}
+
+.service-title{
+  margin:0 0 6px;
+  font-size:clamp(1.05rem,2.2vw,1.25rem);
+  font-weight:800; 
+  letter-spacing:.2px; 
+  color:var(--text);
+}
+
+.service-title .paren{ 
+  color:#B9B2A3; 
+  font-weight:700; 
+}
+
+.service-sub{
+  margin:0; 
+  color:#d9dbe3;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto; 
+  -webkit-hyphens: auto; 
+  -ms-hyphens: auto;
+}
+
+/* Cuerpo: “Incluye” y “Resultados” uno debajo del otro,
+   alineados con la descripción superior */
+.service-body{
+  display:grid; 
+  grid-template-columns: 1fr; 
+  gap:14px; 
+  margin-top:14px;
+  padding-left: var(--svc-indent);
+}
+
+.service-block h4{
+  margin:0 0 8px; 
+  color:var(--text); 
+  font-weight:800; 
+  letter-spacing:.2px;
+}
+
+/* separador sutil entre bloques */
+.service-body .service-block + .service-block{
+  border-top:1px solid rgba(210,180,108,.14);
+  padding-top:10px;
+}
+
+/* Lista con checks dorados */
+.check-list{
+  list-style:none; 
+  padding:0; 
+  margin:0;
+  display:grid; 
+  gap:8px;
+}
+
+.check-list li{
+  position:relative; 
+  padding-left:26px; 
+  color:#cbd5e1; 
+  line-height:1.6;
+}
+
+.check-list li::before{
+  content:"✓";
+  position:absolute; 
+  left:0; 
+  top:0.15rem;
+  width:18px; 
+  height:18px; 
+  line-height:18px; 
+  text-align:center; 
+  font-weight:800; 
+  font-size:.8rem;
+  color:#0A1220;
+  background:linear-gradient(135deg,var(--brand),var(--brand-2));
+  border-radius:999px;
+  box-shadow:0 0 0 4px rgba(184,138,45,.14);
+}
+
+/* CTA centrado al fondo de la tarjeta */
+.service-cta{
+  margin-top: auto;        /* sigue anclado al fondo */
+  padding-top: 20px;       /* crea 20px de separación visual arriba del botón */
+  display: flex;
+  justify-content: center; /* centrado horizontal */
+}
+.service-cta .btn-primary{
+  display:inline-block; 
+  text-align:center;
+  padding:12px 18px; 
+  border-radius:12px; 
+  font-weight:800; 
+  letter-spacing:.2px;
+  color:#0A1220; 
+  background:linear-gradient(135deg,var(--brand),var(--brand-2));
+  box-shadow:0 10px 24px rgba(0,0,0,.35);
+  transition:transform .2s ease, filter .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.service-cta .btn-primary:hover{
+  transform:translateY(-1px); 
+  filter:saturate(1.05);
+}
+
+/* Responsive: reducir sangría en móviles para ganar ancho útil */
+@media (max-width:520px){
+  .service{ --svc-indent: 36px; }
+}

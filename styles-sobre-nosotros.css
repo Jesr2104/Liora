@@ -1,0 +1,557 @@
+/* --> Stylo sobre nosotros [Bloque 1]
+-------------------------------------------------------------------*/
+#intro-finanzas .container{
+    max-width:var(--container);
+    margin:0 auto;padding:0 24px
+}
+
+/* Banner (sin fondo ni bordes, solo tipografía y acentos) */
+#intro-finanzas .eyebrow{
+    font-size:13px;
+    letter-spacing:.55px;
+    text-transform:uppercase;
+    font-weight:800;
+    color:var(--brand);
+    display:inline-block;
+    margin-bottom:6px;
+}
+
+#intro-finanzas .title{
+    margin:0 0 4px;
+    line-height:1.06;
+    font-weight:900;
+    font-size:clamp(30px,4.5vw,50px);
+    background:linear-gradient(135deg,var(--brand),var(--brand-2));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+}
+
+#intro-finanzas .tagline{
+    display:inline-block;
+    margin:0 0 10px;font-weight:700;
+    opacity:.9;
+    color:var(--text)
+}
+
+#intro-finanzas .sub{
+    margin:0; 
+    color:var(--muted);
+    font-size:clamp(15px,1.3vw,18px);
+    max-width:70ch;
+}
+
+/* “Quiénes somos” en layout limpio (sin cajas). */
+#intro-finanzas .qsomos{
+    display:grid;
+    grid-template-columns:0.35fr 1fr;
+    gap:18px;align-items:start;
+    margin-top:clamp(18px,3vw,28px);
+}
+
+@media (max-width:900px){#intro-finanzas .qsomos{
+    grid-template-columns:1fr
+}}
+
+#intro-finanzas h3{
+    margin:0; 
+    font-size:clamp(18px,2.2vw,22px);
+    font-weight:800;
+    letter-spacing:.2px;
+}
+
+/* Línea dorada decorativa debajo del h3 (no es caja) */
+#intro-finanzas .accent{
+    height:2px;
+    width:80px;
+    margin-top:10px;
+    background:linear-gradient(90deg,var(--brand),var(--brand-2));
+}
+
+#intro-finanzas .qsomos p{
+    margin:0; color:var(--muted);
+    max-width:80ch;
+}
+
+/* Aparición suave */
+#intro-finanzas .reveal{
+    opacity:0;transform:translateY(10px);
+    transition:.45s ease
+}
+
+#intro-finanzas .reveal.show{
+    opacity:1;transform:none
+}
+
+@media (prefers-reduced-motion:reduce){
+    #intro-finanzas .reveal{
+        opacity:1;
+        transform:none;
+        transition:none
+    }
+}
+
+/* --> Stylo sobre nosotros [Bloque 2]
+-------------------------------------------------------------------*/
+#diff-enfoque .wrap{
+    padding:clamp(28px,6vw,45px) 0
+}
+
+#diff-enfoque .container{
+    max-width:var(--container);
+    margin:0 auto;
+    padding:0 24px
+}
+
+/* Títulos sin cajas */
+#diff-enfoque h2{
+    margin:0 0 10px;
+    font-weight:900;
+    line-height:1.06;
+    font-size:clamp(22px,3.6vw,34px);
+    background:linear-gradient(135deg,var(--brand),var(--brand-2));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+}
+
+#diff-enfoque .eyebrow{
+    font-size:13px;
+    letter-spacing:.5px;
+    text-transform:uppercase;
+    font-weight:800;
+    color:var(--brand);
+    opacity:.95;
+    margin-bottom:6px;
+    display:inline-block;
+}
+
+#diff-enfoque .subtle{
+    color:var(--muted)
+}
+
+/* Lista de diferenciales (sin cajas: solo icono + texto + línea separadora) */
+#diff-enfoque .diff-list{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:6px 22px;
+    margin-top:8px
+}
+
+@media (max-width:900px){
+    #diff-enfoque .diff-list{grid-template-columns:1fr}}
+    #diff-enfoque .diff-item{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line)}
+    #diff-enfoque .diff-item:last-child{border-bottom:none}
+    #diff-enfoque .ico{flex:0 0 34px;height:34px;border-radius:50%;display:grid;place-items:center}
+    #diff-enfoque .ico svg{width:18px;height:18px;fill:var(--brand-2)}
+    #diff-enfoque .diff-item b{display:block;margin-top:1px}
+    #diff-enfoque .diff-item span{color:var(--muted)}
+
+/* Enfoque (stepper horizontal sin cajas) */
+#diff-enfoque .steps{
+    margin-top:clamp(18px,3.2vw,30px)
+}
+
+#diff-enfoque .steps-grid{
+    position:relative;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+    margin-top:8px
+}
+
+/* Línea conectora (desktop) */
+#diff-enfoque .steps-grid::before{
+    content:"";
+    position:absolute;
+    left:calc(12px + 4px);
+    right:calc(12px + 4px);
+    top:28px;
+    height:2px;
+    background:linear-gradient(90deg,var(--brand),var(--brand-2));
+    z-index: -1;
+}
+
+/* Ocultar línea en pantallas pequeñas y pasar a columnas */
+@media (max-width:1000px){
+    #diff-enfoque .steps-grid{
+        grid-template-columns:repeat(2,1fr)
+    }
+    #diff-enfoque .steps-grid::before{
+        display:none
+    }
+}
+
+@media (max-width:600px){
+    #diff-enfoque .steps-grid{
+        grid-template-columns:1fr
+    }
+}
+
+#diff-enfoque .step{
+    display:grid;
+    grid-template-columns:auto 1fr;
+    column-gap:12px;
+    row-gap:6px;
+    align-items:start
+}
+
+#diff-enfoque .num{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    background:linear-gradient(135deg,var(--brand),var(--brand-2));
+    color:#0A1220;
+    font-weight:900;
+    box-shadow:0 2px 10px rgba(0,0,0,.25)
+}
+
+#diff-enfoque .step h3{
+    margin:4px 0 0;
+    font-size:16px;
+    font-weight:800;
+    color:var(--text)
+}
+
+#diff-enfoque .step p{
+    margin:0;
+    color:var(--muted);
+    grid-column:2
+}
+
+
+/* Aparición suave */
+#diff-enfoque .reveal{
+    opacity:0;
+    transform:translateY(10px);
+    transition:.45s ease
+}
+
+#diff-enfoque .reveal.show{
+    opacity:1;
+    transform:none
+}
+
+@media (prefers-reduced-motion:reduce){
+    #diff-enfoque .reveal{
+        opacity:1;
+        transform:none;
+        transition:none
+    }
+}
+
+/* --> Stylo sobre nosotros [Bloque 3]
+-------------------------------------------------------------------*/
+.purpose-section{  
+    padding-top:5px 0;
+    padding-bottom:55px 0; 
+}
+.section-title{
+  font-size:clamp(1.6rem,3vw,2.2rem);
+  font-weight:800; 
+  letter-spacing:.2px; 
+  margin:0 0 18px;
+  background:linear-gradient(90deg,var(--brand),var(--brand-2));
+  -webkit-background-clip:text; 
+  background-clip:text; 
+  color:transparent;
+}
+
+.purpose-grid{ 
+    display:grid; 
+    grid-template-columns:1fr 1fr; 
+    gap:20px 32px; 
+}
+
+@media (max-width:900px){ 
+    .purpose-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+.purpose-item{ 
+    padding-left:16px; 
+    border-left:2px solid var(--brand); 
+}
+
+.purpose-item .kicker{
+  font-weight:700; 
+  text-transform:uppercase; 
+  letter-spacing:.4px;
+  color:var(--brand-2); margin-bottom:6px;
+}
+
+.purpose-item p{ 
+    margin:0; color:#cbd5e1; 
+}
+
+/* --> Stylo sobre nosotros [Bloque 4]
+-------------------------------------------------------------------*/
+.values-section{ 
+    padding:0px 0; 
+}
+
+.values-list{
+  list-style:none; 
+  margin:0; 
+  padding:8px 0 0;
+  display:grid; 
+  gap:24px 32px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  counter-reset: valor;           /* para numeración 01–08 */
+}
+
+@media (max-width:1100px){
+  .values-list{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width:680px){
+  .values-list{ grid-template-columns: 1fr; }
+}
+
+.values-list li{
+  position:relative;
+  counter-increment: valor;
+  display:grid;
+  grid-template-columns: 42px 1fr;   /* badge | contenido */
+  column-gap:14px;
+  align-items:flex-start;
+  padding:10px 0 14px;               /* espacio para la línea inferior */
+}
+
+/* Badge numerado dorado */
+.values-list li::before{
+  content: counter(valor, decimal-leading-zero);
+  display:grid; 
+  place-items:center;
+  width:34px; 
+  height:34px; 
+  border-radius:999px;
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  color:#0A1220; 
+  font-weight:800; 
+  font-size:.9rem;
+  box-shadow: 0 0 0 4px rgba(184,138,45,.18), 0 10px 22px rgba(0,0,0,.35);
+  margin-top:2px;
+  transform: translateZ(0);
+}
+
+/* Línea de acento sutil */
+.values-list li::after{
+  content:"";
+  position:absolute; 
+  left:42px; 
+  right:0; 
+  bottom:0;
+  height:1px;
+  background: linear-gradient(90deg, rgba(210,180,108,.35), rgba(210,180,108,0));
+  opacity:.6;
+}
+
+/* Contenido a la columna ancha */
+.value-title,
+.value-desc{ 
+    grid-column:2; 
+}
+
+.value-title{
+  margin:0 0 4px;
+  font-weight:800; 
+  letter-spacing:.2px; 
+  line-height:1.25;
+  color:var(--text);
+}
+.value-desc{
+  margin:0; 
+  color:#cbd5e1; 
+  line-height:1.6;
+  white-space:normal; 
+  word-break:normal;
+}
+
+/* Micro–interacción */
+.values-list li:hover::before{
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 6px rgba(184,138,45,.14), 0 16px 30px rgba(0,0,0,.45);
+}
+
+/* --> Stylo sobre nosotros [Bloque 5]
+-------------------------------------------------------------------*/
+.team-section{ 
+    padding:40px 0; 
+}
+
+/* Título de departamento con acento */
+.dept-block{ 
+    margin-top:8px; 
+}
+
+.dept-title{
+  margin:0 0 18px;
+  font-size:clamp(1.1rem,2.2vw,1.35rem);
+  font-weight:800; 
+  letter-spacing:.2px;
+  color:var(--text);
+  position:relative;
+  padding-left:16px;
+}
+
+.dept-title::before{
+  content:""; 
+  position:absolute; 
+  left:0; 
+  top:.4em; 
+  bottom:.4em; 
+  width:4px;
+  background:linear-gradient(180deg,var(--brand),var(--brand-2));
+  border-radius:6px;
+}
+
+/* Personas */
+.people-grid{
+  display:grid; gap:28px 32px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width:900px){ 
+    .people-grid{ grid-template-columns:1fr; } 
+}
+
+.person{
+  position:relative;
+  padding-left:16px;           /* línea de guía a la izquierda */
+}
+
+.person::before{
+  content:"";
+  position:absolute; 
+  left:0; 
+  top:8px; 
+  bottom:8px; 
+  width:2px;
+  background:linear-gradient(180deg, rgba(210,180,108,.55), rgba(210,180,108,0));
+  border-radius:2px;
+}
+
+/* Encabezado */
+.person-header{ 
+    margin-bottom:10px;
+}
+
+.person-name{
+  margin:0;
+  font-size:clamp(1.05rem,2.2vw,1.25rem);
+  font-weight:800; 
+  letter-spacing:.2px; 
+  line-height:1.25;
+  color:var(--text);
+}
+
+.person-role{
+  display:block; 
+  margin-top:4px;
+  color:#cbd5e1; 
+  font-weight:600;
+  background:linear-gradient(90deg,var(--brand),var(--brand-2));
+  -webkit-background-clip:text; 
+  background-clip:text; 
+  color:transparent;
+}
+
+/* Detalle en formato "ficha" sin cajas */
+.person-info{ 
+    margin:0; 
+}
+.person-info .row{
+  display:grid; 
+  grid-template-columns: 180px 1fr; 
+  gap:10px;
+  padding:8px 0;
+  border-bottom:1px solid rgba(210,180,108,.14);
+}
+
+.person-info .row:last-child{ 
+    border-bottom:0; 
+}
+
+.person-info dt{
+  margin:0; 
+  color:#B9B2A3; 
+  font-weight:700;
+  text-transform:uppercase; 
+  letter-spacing:.35px;
+  font-size:.78rem;
+}
+.person-info dd{
+  margin:0; color:#d9dbe3; 
+  line-height:1.6;
+}
+
+/* Chips de idiomas */
+.chip{
+  display:inline-block; 
+  padding:4px 10px; 
+  margin:2px 6px 2px 0;
+  border:1px solid var(--brand);
+  color:var(--brand-2); 
+  font-weight:700; 
+  font-size:.85rem;
+  border-radius:999px; 
+  background:rgba(184,138,45,.06);
+  white-space:nowrap;
+}
+
+.chip:hover{ 
+    filter:brightness(1.05);
+}
+
+/* --> Stylo sobre nosotros [Bloque 6]
+-------------------------------------------------------------------*/
+.cta-final{ 
+    padding:40px 0 0px;
+    position:relative; 
+}
+
+.cta-wrap{
+  text-align:center;
+  padding:32px 20px;
+  border:1px solid var(--border);
+  border-radius:18px;
+  background:rgba(15,30,51,.55);
+  backdrop-filter:saturate(1.2) blur(6px);
+  box-shadow:var(--shadow);
+}
+.cta-wrap::before{
+  content:"";
+  display:block;
+  width:120px; height:4px; margin:0 auto 14px;
+  background:linear-gradient(90deg,var(--brand),var(--brand-2));
+  border-radius:8px;
+}
+
+.cta-wrap h2{
+  margin:0 0 10px;
+  font-size:clamp(1.4rem,3vw,2rem);
+  font-weight:800; letter-spacing:.2px; line-height:1.2;
+  color:var(--text);
+}
+.cta-wrap p{
+  margin:0 0 18px;
+  color:#cbd5e1;
+}
+
+/* Botón principal */
+.btn-cta{
+  display:inline-block;
+  padding:14px 22px;
+  border-radius:12px;
+  font-weight:800; letter-spacing:.2px;
+  color:#0A1220;
+  background:linear-gradient(135deg,var(--brand),var(--brand-2));
+  box-shadow:0 10px 24px rgba(0,0,0,.35);
+  transition:transform .2s ease, filter .2s ease, box-shadow .2s ease;
+}
+.btn-cta:hover{ transform:translateY(-1px); filter:saturate(1.05); }
+.btn-cta:focus-visible{ outline:2px solid var(--ring); outline-offset:2px; }

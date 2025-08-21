@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nombre de la Empresa</title>
+  <meta name="description" content="Asesoría fiscal y financiera independiente. Finanzas claras, decisiones seguras." />
+  <meta name="theme-color" content="#0f172a" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Nombre de la Empresa" />
+  <meta property="og:description" content="Asesoría fiscal y financiera independiente. Finanzas claras, decisiones seguras." />
+  <meta property="og:image" content="<!-- URL de tu imagen social -->" />
+
+  <!-- Tipografía (Inter) para el estilo oscuro adjunto -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles-sobre-nosotros.css">
+</head>
+
+<body>
+  <!-- HEADER / NAV -->
+  <header class="site-header" role="banner">
+    <div class="container nav-wrap">
+      <a href="/" class="brand">
+        <img class="main-logo" src="logo.png" alt="">
+      </a>
+
+      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Abrir menú">
+        ☰ Menú
+      </button>
+
+      <nav id="primary-nav" class="primary" role="navigation" aria-label="Principal">
+        <ul class="menu">
+          <li><a id="link-inicio-menu" data-i18n="nav.home">Inicio</a></li>
+          <li><a id="link-servicios-menu" data-i18n="nav.service">Servicios</a></li>
+          <li><a id="link-sobre-nosotros-menu" aria-current="page"  data-i18n="nav.about">Sobre nosotros</a></li>
+          <li><a id="link-preguntas-frecuentes-menu" data-i18n="nav.faq">Preguntas frecuentes</a></li>
+          <li><a id="link-contactanos-menu" data-i18n="nav.contact">Contáctanos</a></li>
+        </ul>
+        <a class="cta" href="/reservar" data-i18n="nav.cta">Agendar evaluación</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN (déjalo vacío para añadir tu contenido de cada página) -->
+  <main id="contenido" class="container" role="main">
+    <section id="intro-finanzas">
+      <div class="wrap">
+        <div class="container">
+          <!-- Banner limpio -->
+          <header class="reveal" aria-labelledby="hero-title">
+            <span class="eyebrow">Sobre nosotros</span>
+            <h1 id="hero-title" class="title">Su aliado financiero de confianza</h1>
+            <div class="tagline">(Finanzas claras. Decisiones seguras.)</div>
+            <p class="sub">
+              Asesoría fiscal y financiera independiente, con procesos claros y resultados medibles,
+              para que tome decisiones con tranquilidad y haga crecer su patrimonio sin sorpresas.
+            </p>
+          </header>
+
+          <!-- Quiénes somos (sin cajas) -->
+          <section class="qsomos reveal" aria-labelledby="q-somos">
+            <div>
+              <h3 id="q-somos">Quiénes somos</h3>
+              <div class="accent" role="presentation"></div>
+            </div>
+            <p>
+              Somos un equipo de profesionales certificados en fiscalidad, planificación financiera y gestión de riesgos.
+              Acompañamos a personas, familias y pequeñas empresas en todo el ciclo financiero: cumplimiento tributario,
+              orden de flujo de caja, inversión responsable y protección a largo plazo. Hablamos sin jerga, documentamos
+              cada paso y convertimos la complejidad en acciones simples.
+            </p>
+          </section>
+        </div>
+      </div>
+    </section>
+    
+    <section id="diff-enfoque" aria-label="Diferenciales y Enfoque">
+      <div class="wrap">
+        <div class="container">
+
+          <!-- Qué nos diferencia -->
+          <header class="reveal">
+            <span class="eyebrow">Propuesta de valor</span>
+            <h2>Qué nos diferencia</h2>
+          </header>
+
+          <div class="diff-list reveal" role="list">
+            <div class="diff-item" role="listitem">
+              <div class="ico" aria-hidden="true">
+                <!-- Escudo -->
+                <svg viewBox="0 0 24 24"><path d="M12 2l7 3v6c0 5-3.5 9-7 11-3.5-2-7-6-7-11V5l7-3z"/></svg>
+              </div>
+              <div>
+                <b>Independencia real</b>
+                <span>Actuamos en su mejor interés, sin conflictos.</span>
+              </div>
+            </div>
+
+            <div class="diff-item" role="listitem">
+              <div class="ico" aria-hidden="true">
+                <!-- Brújula -->
+                <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm4 6l-3 7-7 3 3-7 7-3z"/></svg>
+              </div>
+              <div>
+                <b>Visión 360°</b>
+                <span>Impuestos, flujo de caja, inversión, previsión y riesgos, integrados en un mismo plan.</span>
+              </div>
+            </div>
+
+            <div class="diff-item" role="listitem">
+              <div class="ico" aria-hidden="true">
+                <!-- Documento -->
+                <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12V8l-4-6zM14 2v6h6"/></svg>
+              </div>
+              <div>
+                <b>Transparencia total</b>
+                <span>Qué haremos, por qué y cuándo—todo por escrito.</span>
+              </div>
+            </div>
+
+            <div class="diff-item" role="listitem">
+              <div class="ico" aria-hidden="true">
+                <!-- Check -->
+                <svg viewBox="0 0 24 24"><path d="M20 6l-11 11-5-5 2-2 3 3 9-9z"/></svg>
+              </div>
+              <div>
+                <b>Ejecución acompañada</b>
+                <span>No solo aconsejamos; implementamos y hacemos seguimiento.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nuestro enfoque (4 pasos) -->
+          <section class="steps reveal" aria-labelledby="enfoque-title">
+            <h2 id="enfoque-title">Nuestro enfoque (4 pasos)</h2>
+            <div class="steps-grid">
+              <!-- 1 -->
+              <div class="step">
+                <div class="num" aria-hidden="true">1</div>
+                <h3>Descubrir</h3>
+                <p>Entendemos su situación actual, objetivos y horizonte de riesgo.</p>
+              </div>
+              <!-- 2 -->
+              <div class="step">
+                <div class="num" aria-hidden="true">2</div>
+                <h3>Planificar</h3>
+                <p>Definimos una estrategia priorizada con hitos, responsables y plazos.</p>
+              </div>
+              <!-- 3 -->
+              <div class="step">
+                <div class="num" aria-hidden="true">3</div>
+                <h3>Ejecutar</h3>
+                <p>Ponemos en marcha el plan con controles y reportes periódicos.</p>
+              </div>
+              <!-- 4 -->
+              <div class="step">
+                <div class="num" aria-hidden="true">4</div>
+                <h3>Acompañar</h3>
+                <p>Medimos resultados, ajustamos y respondemos a cambios de contexto.</p>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="proposito" class="purpose-section">
+      <div class="container">
+        <h2 class="section-title">Propósito</h2>
+
+        <div class="purpose-grid">
+          <div class="purpose-item">
+            <div class="kicker">Misión</div>
+            <p>Ayudar a personas, familias y empresas a tomar decisiones informadas, construir riqueza de forma sostenible y alcanzar sus metas con seguridad.</p>
+          </div>
+
+          <div class="purpose-item">
+            <div class="kicker">Visión</div>
+            <p>Ser el equipo al que nuestros clientes acuden cuando buscan claridad, estrategia y ejecución impecable para su futuro financiero a largo plazo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="valores" class="values-section">
+      <div class="container">
+        <h2 class="section-title">Nuestros valores</h2>
+
+        <ul class="values-list">
+          <li>
+            <span class="value-title">Transparencia</span>
+            <span class="value-desc">Decimos lo que haremos y lo dejamos por escrito.</span>
+          </li>
+          <li>
+            <span class="value-title">Pasión</span>
+            <span class="value-desc">Nos mueve ver impactos reales en su vida y negocio.</span>
+          </li>
+          <li>
+            <span class="value-title">Curiosidad</span>
+            <span class="value-desc">Exploramos alternativas y adoptamos mejores prácticas.</span>
+          </li>
+          <li>
+            <span class="value-title">Responsabilidad</span>
+            <span class="value-desc">Asumimos compromisos de principio a fin.</span>
+          </li>
+          <li>
+            <span class="value-title">Mejora continua</span>
+            <span class="value-desc">Cada proyecto nos hace un poco mejores.</span>
+          </li>
+          <li>
+            <span class="value-title">Enfoque en el cliente</span>
+            <span class="value-desc">Soluciones a su medida, no plantillas.</span>
+          </li>
+          <li>
+            <span class="value-title">Integridad</span>
+            <span class="value-desc">Ética profesional, incluso cuando nadie mira.</span>
+          </li>
+          <li>
+            <span class="value-title">Innovación segura</span>
+            <span class="value-desc">Nuevas ideas sin comprometer su tranquilidad.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="equipo" class="team-section">
+      <div class="container">
+        <h2 class="section-title">Mapa del equipo</h2>
+
+        <div class="dept-block">
+          <h3 class="dept-title">Dirección Administrativa</h3>
+
+          <div class="people-grid">
+            <!-- Laura -->
+            <article class="person">
+              <header class="person-header">
+                <h4 class="person-name">Laura Schneider</h4>
+                <span class="person-role">Directora Administrativa &amp; Compliance</span>
+              </header>
+
+              <dl class="person-info">
+                <div class="row">
+                  <dt>Profesión / Especialidad</dt>
+                  <dd>Lic. Administración (MBA). Gobierno corporativo, compliance (FADP/GDPR), control interno, finanzas administrativas, RR. HH., gestión de riesgos.</dd>
+                </div>
+                <div class="row">
+                  <dt>Áreas de control</dt>
+                  <dd>Políticas y procedimientos, protección de datos, auditorías internas, presupuesto y tesorería, contratación y desarrollo de talento.</dd>
+                </div>
+                <div class="row">
+                  <dt>Idiomas</dt>
+                  <dd>
+                    <span class="chip">Deutsch</span>
+                    <span class="chip">English</span>
+                    <span class="chip">Español</span>
+                  </dd>
+                </div>
+              </dl>
+            </article>
+
+            <!-- Martín -->
+            <article class="person">
+              <header class="person-header">
+                <h4 class="person-name">Martín Gómez</h4>
+                <span class="person-role">Jefe de Operaciones (COO)</span>
+              </header>
+
+              <dl class="person-info">
+                <div class="row">
+                  <dt>Profesión / Especialidad</dt>
+                  <dd>Ing. Industrial. Diseño de procesos, mejora continua (Lean), CRM &amp; automatización, gestión de proveedores, KPIs y SLA.</dd>
+                </div>
+                <div class="row">
+                  <dt>Áreas de control</dt>
+                  <dd>Operaciones diarias, atención de escalaciones, calidad de servicio, logística documental, coordinación de proyectos.</dd>
+                </div>
+                <div class="row">
+                  <dt>Idiomas</dt>
+                  <dd>
+                    <span class="chip">Español</span>
+                    <span class="chip">Inglés</span>
+                    <span class="chip">Deutsch</span>
+                    <span class="chip">Français</span>
+                  </dd>
+                </div>
+              </dl>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta-final" class="cta-final">
+      <div class="container">
+        <div class="cta-wrap">
+          <h2>¿Le gustaría una evaluación inicial sin compromiso?</h2>
+          <p>Agende una llamada de 20 minutos para entender su caso y trazar los primeros pasos.</p>
+
+          <a class="btn-cta" href="#" aria-label="Agendar llamada de 20 minutos">
+            Agendar llamada de 20 min
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-accent" aria-hidden="true"></div>
+    <div class="container footer-wrap"><!-- Columnas -->
+      <div class="columns">
+        <nav class="col" aria-labelledby="links-title">
+          <h4 id="links-title" data-i18n="footer.links">Enlaces</h4>
+          <ul>
+            <li><a id="link-inicio-footer">Inicio</a></li>
+            <li><a id="link-servicios-footer">Servicios</a></li>
+            <li><a id="link-sobre-nosotros-footer">Sobre nosotros</a></li>
+            <li><a id="link-preguntas-frecuentes-footer">Preguntas frecuentes</a></li>
+            <li><a id="link-contactanos-footer">Contáctanos</a></li>
+            <li><a href="/privacidad">Política de Privacidad</a></li>
+            <li><a href="/terminos">Términos y condiciones</a></li>
+            <li><a href="/cookies">Cookies</a></li>
+          </ul>
+        </nav>
+
+        <section class="col" aria-labelledby="contact-title">
+          <h4 id="contact-title" data-i18n="footer.contact">Contáctanos</h4>
+          <ul class="contact-list">
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 4 8 8 8-8"/><path d="M22 6v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6"/></svg>
+              <a href="mailto:contacto@suempresa.ch">contacto@suempresa.ch</a>
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.81.3 1.6.54 2.36a2 2 0 0 1-.45 2.11L8 9a16 16 0 0 0 7 7l.81-.2a2 2 0 0 1 2.11.45c.76.24 1.55.42 2.36.54A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+41415551234">+41 41 555 12 34</a>
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3"/><path d="M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/></svg>
+              <a href="https://wa.me/41760000000" target="_blank" rel="noopener">+41 76 000 00 00</a>
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 1 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Zählerweg 5, 6300 Zug, Suiza
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              L–V, 09:00–18:00
+            </li>
+
+            <li>
+              <strong class="titulo-sm">Síguenos en redes sociales</strong>
+            </li>
+            <li class="social-media" aria-label="Redes sociales">             
+              <div class="sm-row">
+                <a href="https://instagram.com/tu-cuenta" class="sm-link" target="_blank" rel="noopener">
+                  <img class="sm-ico" src="/assets/instagram.svg" alt="Instagram">
+                </a>
+                <a href="https://facebook.com/tu-cuenta" class="sm-link" target="_blank" rel="noopener">
+                  <img class="sm-ico" src="/assets/facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://linkedin.com/company/tu-cuenta" class="sm-link" target="_blank" rel="noopener">
+                  <img class="sm-ico" src="/assets/linkedin.svg" alt="LinkedIn">
+                </a>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="col" aria-labelledby="nl-col-title">
+          <div class="newsletter-card">
+            <h4 id="nl-col-title" data-i18n="nl.title">Suscríbete al boletín</h4>
+            <p class="nl-desc" data-i18n="nl.desc">Recibe consejos creativos, novedades y oportunidades exclusivas directamente en tu correo.</p>
+            <form class="newsletter-inline" id="newsletterForm" novalidate>
+              <label class="sr-only" for="nl-email">Correo electrónico</label>
+              <input id="nl-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="Tu correo electrónico" required />
+              <button type="submit" aria-label="Suscribirme al boletín" data-i18n="nl.button">Suscribirme</button>
+            </form>
+            <div class="nl-success" id="nl-success">¡Listo! Revisa tu correo para confirmar la suscripción.</div>
+            <div class="nl-error" id="nl-error">Ocurrió un problema. Inténtalo de nuevo.</div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Nombre de la Empresa. Todos los derechos reservados.</span>
+      <span class="links">
+        <a href="/compliance">Compliance & Seguridad</a> ·
+        <a href="/certificaciones">Certificaciones</a>
+      </span>
+      <div class="lang-switch">
+        <label for="lang-select">Idioma:</label>
+        <select id="lang-select" aria-label="Cambiar idioma">
+          <option value="es">Español</option>
+          <option value="de">Deutsch</option>
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+        </select>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Inserción del archivo .js -->
+  <script src="script.js"></script>
+
+  <!-- Carga las animaciones -->
+  <!------------------------------------------------------------------>
+  <script>
+    // Animación de aparición
+    (()=>{const els=document.querySelectorAll('#intro-finanzas .reveal');
+      const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.12});
+      els.forEach(el=>io.observe(el));
+    })();
+
+    // Animación on-scroll
+    (()=>{const els=document.querySelectorAll('#diff-enfoque .reveal');
+      const io=new IntersectionObserver(es=>es.forEach(e=>{
+        if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}
+      }),{threshold:.12});
+      els.forEach(el=>io.observe(el));
+    })();
+
+    document.getElementById("link-inicio-menu").href = URL_INICIO;
+    document.getElementById("link-inicio-footer").href = URL_INICIO;
+
+    document.getElementById("link-servicios-menu").href = URL_SERVICIOS;
+    document.getElementById("link-servicios-footer").href = URL_SERVICIOS;
+
+    document.getElementById("link-sobre-nosotros-menu").href = URL_SOBRE_NOSOTROS;
+    document.getElementById("link-sobre-nosotros-footer").href = URL_SOBRE_NOSOTROS;
+
+    document.getElementById("link-preguntas-frecuentes-menu").href = URL_PREGUNTAS_FRECUENTAS;
+    document.getElementById("link-preguntas-frecuentes-footer").href = URL_PREGUNTAS_FRECUENTAS;
+
+    document.getElementById("link-contactanos-menu").href = URL_CONTACTANOS;
+    document.getElementById("link-contactanos-footer").href = URL_CONTACTANOS;
+  </script>
+</body>
+</html>
